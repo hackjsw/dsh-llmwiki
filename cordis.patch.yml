@@ -1,0 +1,15 @@
+- insert:
+    - id: dsh-llm-wiki
+      name: dsh-llm-wiki
+      config:
+        enabled: true
+        autoCapture: false
+        fullMemory: true
+        memoryIdleSeconds: 30
+        autoTrustOwnerSessions: true
+        profile: default
+        allowedSessionIds: []
+        maxResults: 3
+        maxChars: 5000
+        maxFileBytes: 262144
+        minRecallScore: 6

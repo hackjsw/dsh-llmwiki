@@ -1,0 +1,40 @@
+{
+  "name": "dsh-llm-wiki",
+  "version": "0.2.7",
+  "description": "Local Markdown LLM Wiki memory for DeepSeek Harness",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackjsw/dsh-llmwiki.git"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.2-rc.1 <0.3.0"
+  },
+  "dependencies": {
+    "js-yaml": "4.3.2"
+  },
+  "scripts": {
+    "test": "node test/run-isolated.js",
+    "test:engine": "node test/run-isolated.js --engine"
+  },
+  "files": [
+    "lib",
+    "engine/**/*.py",
+    "engine/requirements.txt",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "UNLICENSED"
+}
